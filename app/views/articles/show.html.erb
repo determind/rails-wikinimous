@@ -1,0 +1,17 @@
+<div>
+  <h1> <%= @article.title %> </h1>
+</div>
+
+<div>
+  <%= link_to "Edit", edit_article_path %>
+  <%= link_to "Delete", article_path(@article.id), method: :delete, data: { confirm: "Are you sure?" } %>
+</div>
+
+<div>
+  <p> <%= @article.content %> </p>
+</div>
+
+<div>
+  <br>
+  <%= link_to "Back to list", articles_path %>
+</div>
